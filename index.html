@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mitihanap Weather</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="Enter place...">
+      <button id="searchBtn" aria-label="Search"><i class="fa fa-search"></i></button>
+    </div>
+
+    <p id="status" class="status"></p>
+
+    <div class="weather-card">
+      <div class="location">
+        <i class="fa fa-map-marker-alt"></i>
+        <span id="cityName">Loading...</span>
+      </div>
+      <div class="main">
+        <div class="icon" id="weatherIcon">⛅</div>
+        <div>
+          <div class="temp"><span id="temperature">--</span>°C</div>
+          <div class="description" id="weatherDesc">--</div>
+        </div>
+      </div>
+      <div class="details">
+        <div><i class="fa fa-droplet"></i><span>Humidity<b id="humidity">--</b></span></div>
+        <div><i class="fa fa-wind"></i><span>Wind<b id="wind">--</b></span></div>
+        <div><i class="fa fa-temperature-half"></i><span>Feels Like<b id="feels">--</b></span></div>
+      </div>
+    </div>
+
+    <div class="forecast">
+      <div class="day-card" id="day1"></div>
+      <div class="day-card" id="day2"></div>
+      <div class="day-card" id="day3"></div>
+    </div>
+
+    <div id="map"></div>
+    <p class="credit">Data: Open-Meteo · Radar: RainViewer · Map: OpenStreetMap</p>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
